@@ -123,7 +123,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ryan-kttam"
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-instagram"
+      icon: "fab fa-fw fa-linkedin-in"
       url: "https://www.linkedin.com/in/kai-tai-tam/"
 
 # Site Footer
@@ -145,7 +145,7 @@ footer:
       icon: "fab fa-fw fa-bitbucket"
       # url:
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-instagram"
+      icon: "fab fa-fw fa-linkedin-in"
       url: "https://www.linkedin.com/in/kai-tai-tam/"
 
 
