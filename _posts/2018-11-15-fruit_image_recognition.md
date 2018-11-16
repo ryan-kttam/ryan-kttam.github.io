@@ -2,9 +2,15 @@
 title: "Fruit Image Recognition"
 date: 2018-11-15
 header:
-  image: "/images/fruit1.jpg"
+  image: "/images/fruit2.jpg"
 excerpt: "Convolutional Neural Network, Machine Learning, Data Science"
 ---
+
+### Introduction
+
+There are many fruits available in the market today. Consumers, however, may not know every fruit and their nutritional value. They can definitely search for nutrition value for any fruit. However, for people who do not use internet often (i.e. elder), they might have a hard time looking for the fruit's nutrition value. 
+Therefore, the goal of this post is to develop machine learning model, specifically a convolutional neural network, or CNN, to recognize what fruit is showing in an image. 
+
 
 # H1 Heading
 

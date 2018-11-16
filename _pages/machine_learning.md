@@ -7,7 +7,5 @@ header:
   image: "/images/HK3.jpg"  
 ---
 
-## [Fruit Image Recognition1](/posts/2018-11-15-fruit_image_recognition/)
-
 ## [Fruit Image Recognition](/fruit_image_recognition/)
 
