@@ -1,10 +1,9 @@
 ---
-title: "ML Project: Project1"
+title: "Fruit Image Recognition"
 date: 2018-11-15
-tags: [Machine Learning, Data Science, neural network]
 header:
   image: "/images/fruit1.jpg"
-excerpt: "Machine Learning, Data Science"
+excerpt: "Convolutional Neural Network, Machine Learning, Data Science"
 ---
 
 # H1 Heading
@@ -19,7 +18,7 @@ example with *italics*
 
 example with **bold** text
 
-example with [link](https://github.com/ryan-kttam)?
+example with [link](https://github.com/ryan-kttam)
 
 example with bulleted list:
 * first

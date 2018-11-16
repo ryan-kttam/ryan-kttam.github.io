@@ -7,4 +7,5 @@ header:
   image: "/images/HK3.jpg"  
 ---
 
-this is a test.
+## [Fruit Image Recognition](/fruit_image_recognition/)
+
