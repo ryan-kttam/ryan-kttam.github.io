@@ -32,11 +32,14 @@ def process_image(img_path, img_list, label_list, fruit_name, dim):
     label_list += [fruit_name]*4 # add those fruit labels
 ```
 
-# Model Tuning
+## Model Tuning
 
 I will be implementing a pre-trained model, **VGG16**, in this project. VGG16 is a CNN architecture that is considered to be an excellent vision model, and it generally performs well on object classifications. Prior to implementing VGG16, I have already tried out different models, such as artificial neural network and self-built CNN. It turns out that VGG16 performed the best among those three models.
 
-I am going to fine-tune the model by adjusting (or freezing) the number of trainable layers and trying different learning rates.
+I am going to fine-tune the model by adjusting the following:
+* the number of trainable layers
+* learning rates
+* RMSprop or SGD optimizer
 
 The last five layer ...
 
