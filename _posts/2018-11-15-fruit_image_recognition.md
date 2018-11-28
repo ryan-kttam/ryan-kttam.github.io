@@ -37,56 +37,9 @@ def process_image(img_path, img_list, label_list, fruit_name, dim):
 I will be implementing a pre-trained model, **VGG16**, in this project. VGG16 is a CNN architecture that is considered to be an excellent vision model, and it generally performs well on object classifications. Prior to implementing VGG16, I have already tried out different models, such as artificial neural network and self-built CNN. It turns out that VGG16 performed the best among those three models.
 
 I am going to fine-tune the model by adjusting the following:
-* the number of trainable layers
-* learning rates
-* RMSprop or SGD optimizer
+* the number of trainable VGG16 layers (None vs. the last 5 layers)
+* learning rates (0.01 vs. 0.001)
+* RMSprop vs. SGD optimizer
 
-The last five layer ...
-
-
-# H1 Heading
-
-## H2 Heading
-
-### H3 Heading
-
-some basic text.
-
-example with *italics*
-
-example with **bold** text
-
-example with [link](https://github.com/ryan-kttam)
-
-example with bulleted list:
-* first
-+ two
-- three
-
-example with numbered list:
-1. first
-2. two
-
-python code block:
-```python
-    import numpy as np
-    def test_function(x):
-      z = np.sum(x)
-      return z
-```
-
-python code block:
-```r
-library(tidyverse)
-df = read.csv('xxx.csv')
-head(df)
-```
-
-inline code: `x+y`
-
-an image:
-<img src="/images/mm2.jpg" alt="mountain">
-
-math equation:
-
-$$ z=x+y$$
+At the end of the VGG16 model, I will be adding a fully connected layer (ReLU) as well as two dropout layers before and after the fully connected layer. I then close the model by adding a softmax layer with 22 nodes, which equal the number of fruit types. Adding dropout layers can reduce the model to overfit by preventing co-adaptation on data. In my case, the dropout rate is 20%, meaning the model will be randomly blocking 20% of the nodes before and after the fully connected layer when training the model. The image below shows the beginning and the last layers of the model. 
+<img src="/images/cnn_model.jpg" alt="mountain">
