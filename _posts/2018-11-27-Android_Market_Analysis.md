@@ -1,5 +1,5 @@
 ---
-title: "Fruit Image Recognition"
+title: "Android Market Analysis"
 date: 2018-11-27
 header:
   image: "/images/android.jpg"

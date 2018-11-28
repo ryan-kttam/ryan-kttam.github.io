@@ -1,5 +1,5 @@
 ---
-title: "Customer Type Clustering"
+title: "Women Clothing Reviews"
 date: 2018-04-11
 header:
   image: "/images/women_clothes.jpg"
