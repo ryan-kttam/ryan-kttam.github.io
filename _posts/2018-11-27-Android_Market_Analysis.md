@@ -43,12 +43,12 @@ Next lets check whether the 'size' are using the same unit.
 There is one app ending with '+', 8829 apps ending with MB and 316 apps ending with KB (also 1695 apps are "varies with device"). Something seems odd with the app size unit as '+', I decided to take a look:
 <img src="/images/android_analysis/image3.jpg" alt="data error">
 If we look closely, we can see that all columns for that particular seems to shift left by one column. For simplicity, I decided to remove this app from the dataset.
-```Python
+```python
   data = data.loc[[i!='+' for i in size_unit] ,]
 ```
 
 Next step is to standardize all app size and make sure they are using the same unit. In this case, I am changing all app size to MB. In addition, I am removing all the comma and the plus sign in 'Install', then converting them to numeric values.
-```Python
+```python
   size_unit = [unit[-1] for unit in data.Size]
   kb_loc = [i=='k' for i in size_unit] # find all indexes of KB
   mb_loc = [i=='M' for i in size_unit] # find all indexes of MB
@@ -98,9 +98,11 @@ Almost 93% of the apps in the android market are free, and the average rating be
 
 It is interesting that 'Family' is only rank 6th in the number of installs while it actually has almost doubled the number of apps of 'Game'. It shows that app developers or companies maybe on the wrong focus since android users seem to think other categories such as 'Communication' and 'Productivity' apps are more important than 'Family' apps.
 
-## game Genres
+## Game Genres
 
-#### Suppose a game design company is developing a game that targets to attract millions players on Android, they are open-minded and are willing to accept any genre as long as the game will be popular. What game genre should they develop?
+Suppose a game design company is developing a game that targets to attract millions players on Android, they are open-minded and are willing to accept any genre as long as the game will be popular.
+
+#### What game genre should they develop?
 
  Let's get an idea about what other game design companies think of game genres:
 <img src="/images/android_analysis/Figure_8.jpg" alt="Figure 8">
