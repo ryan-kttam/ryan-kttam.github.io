@@ -1,6 +1,6 @@
 ---
 title: "Android Market Analysis"
-date: 2018-11-27
+date: 2018-12-02
 header:
   image: "/images/android.jpg"
 excerpt: "Data Visualization, Data Analysis, Data Science"
@@ -8,7 +8,7 @@ excerpt: "Data Visualization, Data Analysis, Data Science"
 
 # Background
 How much do you know about the mobile app marketing? What category do you think has the most installs in the market? is it social media? or games? In this post, I am going to explore and learn more about the mobile app market, specifically, the Android Market.
-I will be using a dataset on [Kaggle](https://www.kaggle.com/lava18/google-play-store-apps), which includes more than 10,000 Play Store apps. The dataset has size, ratings, category, and 9 more features for us to explore. Let's see what we can get out of from the dataset. The Python code will be available [here] and I also uploaded the dataset on my [Github Page].
+I will be using a dataset on [Kaggle](https://www.kaggle.com/lava18/google-play-store-apps), which includes more than 10,000 Play Store apps. The dataset has size, ratings, category, and 9 more features for us to explore. Let's see what we can get out of from the dataset. The Python code will be available [here] and I also uploaded the dataset on my [Github Page](https://github.com/ryan-kttam/android_market_analysis/blob/master/googleplaystore.csv).
 
 *Before you installed all required packages before running the code.*
 
@@ -65,8 +65,8 @@ Excellent! Now the data is ready and we can start visualizing the Android market
 # Data Visualization
 
 
-## Size and Ratings
-To begin with size and ratings:
+## Size and Rating
+To begin with size and rating:
 
 <img src="/images/android_analysis/Figure_1.jpg" alt="Figure 1">
 <img src="/images/android_analysis/Figure_2.jpg" alt="Figure 2">
