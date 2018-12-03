@@ -40,14 +40,23 @@ Word cloud is a method that shows the most frequent words in a text. We often ca
 <img src="/images/women_clothing/Figure_5.jpg" alt="Figure 5">
 <img src="/images/women_clothing/Figure_6.jpg" alt="Figure 6">
 
-Some highlighted words for Rating 1 are, look, fit, fabric, and color. As expected, there are negative words such as disappointed, cheap, and unflattering. Surprisingly, positive words can be seen in this cloud like cute and beautiful.
-Starting from rating 3, we no longer see any negative words in the cloud. While look, fit, fabric, and color still dominate the cloud in rating 3, we are seeing more positive words such as beautiful, pretty, and love.
-The number of positive words once again grow as rating reaches rating 5. In fact, love and perfect take over and finally dominate the cloud.
+Some common words among all or most ratings are look, fabric, color, and fit. In Rating 1, there are negative words such as disappointed, small, and unflattering. Surprisingly, positive words can be seen in this cloud like great and cute.
+Starting from rating 3, we no longer see negative words in the cloud. More and More positive words start to dominate the cloud such as beautiful, pretty, and love.
+The number of positive words once again grow as rating reaches rating 5. In fact, love and perfect take over and eventually dominate the cloud.
 
 # Sentiment Analysis
 
-Those clouds helped us visualize what consumers generally think when writing reviews. We can further translate these messages into numeric values by implementing sentiment analysis. I am using SentimentIntensityAnalyzer from NLTK in order to calculate the sentiment scores for each sentence. I am only using three of the four values this function returned: neg, neu, and pos, which are negative, neutral, and positive, respectively. The sum of these three values equals to one. For example, “This dress is absolutely perfect” will return (0.0, 0.5, 0.5), which means .5 in both neutral and positive.
+Those clouds helped us visualize what consumers generally think when writing reviews. We can further translate these messages into numeric values by implementing sentiment analysis. I am using SentimentIntensityAnalyzer from NLTK in order to calculate the sentiment scores for each sentence. I am only using three of the outputs this function returned: neg, neu, and pos, which correspond to negative, neutral, and positive. For each text review, The sum of these three values equals to one. For example, “This dress is absolutely perfect” will return (0.0, 0.5, 0.5), which means .5 in both neutral and positive.
 
-## graph
+<img src="/images/women_clothing/Figure_7.jpg" alt="Figure 7">
 
-This bar chart portrays the percentage of negative emotion decreases as rating increases, while the percentage of positive emotion increases as rating increases. Neutral emotion is the major part of the reviews and it remains stable throughout all ratings.
+There are a couple of interesting insights from this bar chart.
+ - The percentage of negative emotion decreases as rating increases, while the percentage of positive emotion increases as rating increases.
+ - Neutral emotion is the major part of the reviews and it remains stable throughout all ratings.
+ - Positive percentages are greater than negative percentages across all ratings, even in rating 1.
+
+# Machine Learning Model
+
+ - explain why we need to structure the dataset in a certain way.
+ - explain why use multinomialNB()/ why it is appropriate to use
+ - explain stopword, punctuation, stemming vs lemmatizing
