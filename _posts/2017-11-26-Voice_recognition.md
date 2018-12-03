@@ -9,7 +9,7 @@ excerpt: "Support Vector Machine, Model Tuning, Machine Learning, Data Science"
 
 # Background
 
-Suppose an advertising team on Facebook is interested in identifying a person’s gender from an audio clip in order to increase the effectiveness in advertisements, and the engineer teams have preprocessed and transformed the data into various formats. My task is to implement an algorithm that can classify whether the clip contains a male voice or a female voice.
+Suppose an advertising team on Facebook is interested in identifying a person’s gender from an audio clip in order to increase the effectiveness in advertisements, and the engineer team has preprocessed and transformed the data into various formats. My task is to implement an algorithm that is able to classify whether the clip contains a male voice or a female voice.
 The dataset is available at [Kaggle](https://www.kaggle.com/jeganathan/voice-recognition), and the python file is available at my [Github]( https://github.com/ryan-kttam/) page.
 
 # Data Exploration
@@ -104,5 +104,8 @@ It is finally the time to plug the model in to the test set.
   predictions = clf.predict(x_test)
   accuracy_score(y_test, predictions) #accuracy: 99.05% on test set
 ```
-The SVM model performed exceptionally well, with 99.05% accuracy on our test set! While this is a very good model, there are some potential improvements that I could have try when tuning the models, such as trying kernel = 'linear' or 'poly'. In our case, we did not adjust the kernel at all, only using 'rbf', but 99% is still a decent accuracy for my test set.
+The SVM model performed exceptionally well, with 99.05% accuracy on our test set! While this is a decent model, there are some potential improvements that I could have tried when tuning it, such as kernel = 'linear' or 'poly'. I only used 'rbf' in this project, but I am still able to get 99% accuracy for my test set.
+
+# Implementation
+
 Not only can the model be used in advertising team to increase the effectiveness in finding the right target to sell their products, but it can also be used in customer service team. For example, they can predict whether the voice of a complaint is male or female and construct an analysis on gender regarding whether one gender tends to have more complains than the other. Having this model is handy as it save the company tons of resources and time.
