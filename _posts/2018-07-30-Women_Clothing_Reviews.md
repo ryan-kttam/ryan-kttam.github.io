@@ -57,6 +57,16 @@ There are a couple of interesting insights from this bar chart.
 
 # Machine Learning Model
 
- - explain why we need to structure the dataset in a certain way.
+Text data requires additional modifications before passing it to the machine learning model:
+ - Tokenization: parsing each text into bags of words
+ - Vectorization: all words will be encoded into numbers to be passed to a machine learning model.
+
+Sci-kit learn’s countVectorizer can separate text into tokens and count the frequency of each token. For example, consider a block of text: [ "This dress cute", "I hate this dress", "dress too small"]. It will return:
+
+<img src="/images/women_clothing/image3.jpg" alt="Image 3">
+
+In addition to CountVectorizer, I also implement TD-IDF vectorizer to the text data. TD-IDF stands for term frequency - inverse document frequency, which vectorizes text by figuring out what terms are the most relevant for a document.
+For example, say there is a text review, "I hate this dress". Since customers generally do not use negative words when writing reviews, it is reasonable to assume "hate" is much less frequent than the word "this" or "dress". In other words, this word must be more useful than the other words like "this” and “dress”, and therefore “hate” will have a higher score compared to "this" or "dress".
+
  - explain why use multinomialNB()/ why it is appropriate to use
  - explain stopword, punctuation, stemming vs lemmatizing
