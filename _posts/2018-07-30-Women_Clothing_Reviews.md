@@ -65,8 +65,37 @@ Sci-kit learn’s countVectorizer can separate text into tokens and count the fr
 
 <img src="/images/women_clothing/image3.jpg" alt="Image 3">
 
-In addition to CountVectorizer, I also implement TD-IDF vectorizer to the text data. TD-IDF stands for term frequency - inverse document frequency, which vectorizes text by figuring out what terms are the most relevant for a document.
-For example, say there is a text review, "I hate this dress". Since customers generally do not use negative words when writing reviews, it is reasonable to assume "hate" is much less frequent than the word "this" or "dress". In other words, this word must be more useful than the other words like "this” and “dress”, and therefore “hate” will have a higher score compared to "this" or "dress".
+The first column corresponds to the text index. The second column and beyond are binary values of whether a particular word exists in that text.
 
- - explain why use multinomialNB()/ why it is appropriate to use
- - explain stopword, punctuation, stemming vs lemmatizing
+There are a number of techniques I could use when applying CountVectorizer to the text. Applying these techniques can clean the text and simplify the machine learning model:
+ - Removing stopword and punctuations.
+  - Stopword means common words in English, e.g. the, her, this, etc.
+ - Stemming and lemmatization: techniques that are used to prepare text for further processing
+  - Stemming removes suffixes and prefixes such as -ed, -s, and -ize. Sometimes it may result in a word that is not an actual word. e.g. humble -> humbl
+  - Lemmatization makes sure the modified word is an actual word in English, but it is slower than stemming and need to define which part you want to modify.
+ - N-gram: a set of consecutive words. E.g. great dress, small sweater.
+ - Min_df/ Max_df: ignore words in which their frequency is lower/higher than a given threshold. An example of min_df would be a typo, and an example for max_df would be a common word like look and dress.
+
+In addition to CountVectorizer, I also implement TD-IDF vectorizer to the text data. TD-IDF stands for term frequency - inverse document frequency, which vectorizes text by figuring out what terms are the most relevant for a document.
+For example, say there is a text review, "I hate this dress". Since customers generally do not use negative words when writing reviews, it is reasonable to assume "hate" is much less frequent among all text reviews compared to the word like "this" or "dress". In other words, this word must be more useful than the words like "this" and "dress", and therefore "hate" will have a higher score compared to "this" or "dress".
+``` python
+  stemmer = PorterStemmer()
+
+  def clean_mess(text):
+      step1 = [i for i in text if i not in string.punctuation]
+      step2 = ''.join(step1)
+      step3 = ' '.join([i for i in step2.split() if i.lower() not in sw])
+      step4 = [stemmer.stem(i) for i in step3.split()]
+      return step4
+
+  vector = CountVectorizer(stop_words=sw, ngram_range=(1,3), min_df=9, analyzer=clean_mess)
+  vector2 = TfidfTransformer()
+  training = vector.fit_transform(data['Review Text'])
+  training2 = vector2.fit_transform(training)
+```
+
+I am going to use Naïve Bayes as my machine learning algorithm. Naïve Bayes is a machine learning algorithm that is easy and fast to predict classes; however, it requires independence assumption. Even though it is impossible to consider all predictors are completely independent, It is still reasonable to make such an assumption as each review is independent than the others. The primary reason I am implementing this algorithm is that its computational requirement is minimal compared to other algorithms like random forest.
+
+As usual, I split the data into a training set and test set in order to avoid overfitting. The dimension of the features are `17614 * 2826` and there are five possible outcomes: rating 1-5. I am going to use accuracy as my evaluation metric. The accuracy is calculated by the correct predictions over the all possible predictions. I set the benchmark to be 20% since there is a 20% chance of getting the correct answer randomly. If the machine learning model predicts higher than 20%, then we can conclude that the text is helpful in predicting customer ratings.
+
+It turns out the accuracy is 60%, which is significantly higher than random guessing. It is possible to tune the model or to try different machine learning algorithms to see if we can get a better accuracy, but I will leave it as future improvements. This post has shown the potential for text analysis and how we can implement natural language processing techniques to get valuable information from customer reviews. This post on text mining definite helps the company know more about its customers, and more importantly, to know more about what customers care about in term of the online shopping experience.
