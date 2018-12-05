@@ -4,7 +4,7 @@ permalink: /machine-learning/
 title: "Machine Learning Posts by Tags"
 author_profile: true
 header:
-  image: "/images/HK3.jpg"  
+  image: "/images/HK2.jpg"  
 ---
 ## [Android Market Analysis](/Android_Market_Analysis/)
 Data Visualization, Data Analysis
