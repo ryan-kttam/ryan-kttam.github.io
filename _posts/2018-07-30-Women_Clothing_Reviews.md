@@ -6,11 +6,9 @@ header:
 excerpt: "Natural Language Processing, NLP, Text mining, Data Science"
 ---
 
-# Please visit [here](https://github.com/ryan-kttam/women_clothing) for more information.
-
 # Background
 
-Product reviews are very important for a company, as most consumers read reviews online before purchasing a product, they trust it as much as personal recommendations, and most reviews are expressive and honest. Product reviews also give companies ideas about how they can improve their products to increase customer’s satisfaction. In this post, I am going to predict how satisfied a consumer is after purchasing a product, based on their product reviews, specifically, the text reviews.
+Product reviews are very important for a company, as most consumers read reviews online before purchasing a product, they trust it as much as personal recommendations, and most reviews are expressive and honest. Product reviews also give companies ideas about how they can improve their products to increase customer’s satisfaction. In this post, I am going to predict how satisfied a consumer is after purchasing a product, based on their product reviews, specifically, the text reviews. The dataset is available at my [Github](https://github.com/ryan-kttam/Customers-Type-Clustering).
 
 # Data exploration
 
