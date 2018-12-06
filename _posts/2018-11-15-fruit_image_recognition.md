@@ -41,5 +41,20 @@ I am going to fine-tune the model by adjusting the following:
 * learning rates (0.01 vs. 0.001)
 * RMSprop vs. SGD optimizer
 
-At the end of the VGG16 model, I will be adding a fully connected layer (ReLU) as well as two dropout layers before and after the fully connected layer. I then close the model by adding a softmax layer with 22 nodes, which equal the number of fruit types. Adding dropout layers can reduce the model to overfit by preventing co-adaptation on data. In my case, the dropout rate is 20%, meaning the model will be randomly blocking 20% of the nodes before and after the fully connected layer when training the model. The image below shows the beginning and the last layers of the model. 
+At the end of the VGG16 model, I will be adding a fully connected layer (ReLU) as well as two dropout layers before and after the fully connected layer. I then close the model by adding a softmax layer with 22 nodes, which equal the number of fruit types. Adding dropout layers can reduce the model to overfit by preventing co-adaptation on data. In my case, the dropout rate is 20%, meaning the model will be randomly blocking 20% of the nodes before and after the fully connected layer when training the model. The image below shows the beginning and the last layers of the model.
 <img src="/images/cnn_model.jpg" alt="mountain">
+
+result:::
+# None, 0.001, RMS: 72.56%
+# None, 0.01, RMS: 3.72%
+# None, 0.0001, RMS: 72.35%
+# last 5, 0.001, RMS: 6.88%
+# last 5, 0.01, RMS: 3.72%
+# last 5, 0.0001, RMS: 81.73%
+# last 5, 0.00001, RMS: 78.72%
+# None, 0.001, SGD: 60.74%
+# None, 0.01, SGD: 70.27%
+# None, 0.0001, SGD: 33.46%
+# last 5, 0.001, RMS: 76.65%
+# last 5, 0.01, RMS: 79.51%
+# last 5, 0.0001, RMS: 56.59%
