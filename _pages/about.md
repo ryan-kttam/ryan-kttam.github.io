@@ -21,7 +21,7 @@ I am a data analyst at *[Lawrence Livermore National Laboratory](https://en.wiki
 
     *Relevant Project: [Voice Recognition](/Voice_recognition/)*
 
- * **Unsupervised Learning (Clustering)** - *Experience in implementing Silhouette coefficient.*
+ * **Unsupervised Learning (Clustering)** - *Experience in implementing clusters and silhouette coefficient.*
 
     *Relevant Project: [Customer Type Clustering](/Customer_Type_Clustering/)*
 
