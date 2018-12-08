@@ -26,6 +26,15 @@ I am a data analyst at *[Lawrence Livermore National Laboratory](https://en.wiki
 
  * Feature Learning/ Feature Engineering - *Relevant Project: [Customer Type Clustering](/Customer_Type_Clustering/)*
 
-## Technical Language
+## Language
   * Expert: Python, R, SQL
+    + Python Packages: Keras, Pandas, Matplotlib, Seaborn, NLTK, Scikit-Learn, Numpy, and more
   * Experienced: Hadoop, Java, C
+  * Fluent: English, Cantonese, Mandarin
+
+# Education
+  * UC Davis - Statistics, B.S.     *Graduated 2016*
+  * Udacity - Machine Learning Engineer Nanodegree     *Graduated 2018*
+
+# Awards
+  * Three LLNL Spot Awards - Recognition of outstanding contributions in multiple projects
