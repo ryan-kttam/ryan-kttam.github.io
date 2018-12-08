@@ -30,11 +30,11 @@ I am a data analyst at [Lawrence Livermore National Laboratory](https://en.wikip
 
 ### Technical Language
 
- * Expert
-  - Python
-  - R
-  - SQL
- * Familiar
-  - Hadoop
-  - Java
-  - C
+  * Expert
+    - Python
+    - R
+    - SQL
+  * Familiar
+    - Hadoop
+    - Java
+    - C
