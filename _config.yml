@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Ryan Kai Tai Tam"
+title                    : "Home"
 title_separator          : "-"
 name                     : "Ryan Kai Tai Tam"
 description              : "Data Science Portfolio"
