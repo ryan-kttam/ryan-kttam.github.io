@@ -104,7 +104,7 @@ author:
   name             : "Ryan Kai Tai Tam"
   avatar           : "/images/bio_self.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Science Portfolio"
-  location         : "Castro Valley, CA"
+  location         : "San Francisco Bay Area, CA"
   email            :
   links:
     - label: "Email"
