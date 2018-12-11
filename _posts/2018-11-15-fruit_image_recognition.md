@@ -40,7 +40,9 @@ At the end of the VGG16 model, I will be adding a fully connected layer (ReLU) a
 
 <img src="/images/fruit_image/cnn_model.jpg" alt="CNN model">
 
-I will be using accuracy as my metric to evaluate the model performance. The accuracy is calculated by `the number of correct prediction / the number of total prediction * 100%`. The higher the accuracy is, the better the model performance. I am setting the benchmark to be guessing the result at random. In other words, there is a 4.5% chance of getting the fruit correctly when guessing randomly.
+I will be using categorical_crossentropy as my loss function and accuracy as my metric to evaluate model’s performance. categorical_crossentropy increases as the predicted probability diverges from the actual label. In other words, we want to minimize categorical_crossentropy to increase the predictive power of the model. Moreover, I will use accuracy as my metric to evaluate the model performance. The accuracy is calculated by `the number of correct prediction / the number of total prediction * 100%`. The higher the accuracy is, the better the model performance. I am also setting the benchmark to be guessing the result at random. In other words, there is a 4.5% chance of getting the fruit correctly when guessing randomly.
+
+In addition, I set the model to train for 50 epochs, which should be enough for most cases. The training process will stop when the accuracy on the validation set doesn’t improve for five epochs. For example, if the accuracy was 80% on 23th epochs and the accuracy did not scored higher than 80% for the next five epochs, the model would stop training and return the model with 80% accuracy.
 
 I am going to use Grid Search in order to find the best parameters for the model by adjusting the following:
 * the number of trainable VGG16 layers (None vs. the last 5 layers)
@@ -59,8 +61,13 @@ The best parameters for this model is learning rate = 0.0001, RMS, and the last 
 
 Let’s throw this model to some real-life photos I personally took and see how the model would handle:
 
-...
-...
-...
+<img src="/images/fruit_image/apple1.jpg" alt="Test Image: Apple">
+<img src="/images/fruit_image/banana1.jpg" alt="Test Image: Banana">
+<img src="/images/fruit_image/orange1.jpg" alt="Test Image: Orange">
+<img src="/images/fruit_image/orange2.jpg" alt="Test Image: Orange">
 
+In the above image, the model correctly predicted apple, banana, and the second orange. It predicted the first orange as lemon. In fact, the first orange does look like a lemon, but we have seen enough oranges to learn that not all oranges have orange color. The model obviously took color into consideration, but the oranges from the training sets mostly have orange color. That might be one of the reasons why it thought it is a lemon instead of an orange.
+
+
+# Conclusion
 In this post, I discussed how we can apply CNN models to identify fruits in an image, even if you have a limited dataset. Data augmentation is extremely useful when your model needs to recognize a label that has limited resources. Model tuning is also an important part of building neural networks. As shown above, different parameters could have very different outcomes even if we just adjust learning rate alone. Choosing the best optimizer/ learning rate and adjusting the best number of trainable layers are just one of the many steps in finding the best model for this data, and I believe the model could still be improved.
