@@ -66,7 +66,7 @@ Let’s throw this model to some real-life photos I personally took and see how 
 <img src="/images/fruit_image/orange1.jpg" alt="Test Image: Orange">
 <img src="/images/fruit_image/orange2.jpg" alt="Test Image: Orange">
 
-In the above image, the model correctly predicted apple, banana, and the second orange. It predicted the first orange as lemon. In fact, the first orange does look like a lemon, but we have seen enough oranges to learn that not all oranges have orange color. The model obviously took color into consideration, but the oranges from the training sets mostly have orange color. That might be one of the reasons why it thought it is a lemon instead of an orange.
+In the above images, the model correctly predicted apple, banana, and the second orange (bottom right). It predicted the first orange (bottom left) as lemon. In fact, the first orange does look like a lemon, but we have seen enough oranges to learn that not all oranges have orange color. The model took color into consideration, and the oranges from the training sets mostly are orange color, which led the model to think oranges *must* have orange color. That might be one of the reasons why it thought the fruit in the image was a lemon instead of an orange.
 
 
 # Conclusion
