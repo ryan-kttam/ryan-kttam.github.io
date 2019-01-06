@@ -5,6 +5,7 @@ title: "How do Machine Learning Algorithms work?"
 author_profile: true
 header:
   image: "/images/ml_chart.jpg"  
+mathjax: "true"
 ---
 # Logistic Regression
 Logistic regression measures the relationship between the categorical dependent variable and one or more independent variables by estimating probabilities using a logistic function. ([Wikipedia](https://en.wikipedia.org/wiki/Logistic_regression))
