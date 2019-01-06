@@ -17,8 +17,7 @@ We then transform the L to probabilities using the following formula: p= e^L / (
 
 
 $$z=x+y$$
-<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-  $$L=alpha_0+beta_0$$
-</script>
+
+$$L=alpha_0+beta_0$$
 
 tt
