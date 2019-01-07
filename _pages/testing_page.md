@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /test_page/
+permalink: /test-page/
 title: "How do Machine Learning Algorithms work?"
 author_profile: true
 header:
