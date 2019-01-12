@@ -52,4 +52,4 @@ Consider the table above, if we do NOT ask peers, there will be 4 possible outco
 Information gain
 Information gain measures how useful a feature is for splitting the label (yes/no). We want to **maximize information gain**, and the feature with the highest information gain will split first.
 is the expected reduction in entropy due to sorting on a particular attribute (say an attribute that has small entropy)
-For example, the information gain of studying textbook is: $$Gain(S, "study textbook")= H(S) - ( p(study)H(S_study)+p(not study)H(S_notStudy) )
+For example, the information gain of studying textbook is: $$Gain(S, "study textbook")= H(S) - ( p(study)H(S_study)+p(not study)H(S_notStudy) )$$
