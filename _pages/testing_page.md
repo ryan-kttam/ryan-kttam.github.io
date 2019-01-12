@@ -40,6 +40,12 @@ Before we explore how decision trees works, we need to understand the following 
  - Entropy: It indicates how pure one subset is. In other words, it tells you how un-certain you are about a randomly picked item is yes or no. We want to **minimize entropy** as much as possible. We will explore further below in detail.
  - Information gain: It measures how useful a feature is for splitting the label (yes/no). We want to **maximize information gain**, and the feature with the highest information gain will split first.
 
+## Characteristics of Decision Trees
+ - Easy to understand and explain
+ - Can handle non-linear features
+ - Prone to overfitting
+ - cannot train unseen categorical values
+
 ## How does decision trees work?
 
 There are many ways to measure the purity of the split. One way is utilizing entropy and information gain.
@@ -50,6 +56,11 @@ Entropy: $$H(S) = -p_1 log_2 p_1 – p_0 log_2 p_0$$, where $$S$$ is the subset 
 Consider the table above, if we do NOT ask peers, there will be 4 possible outcomes: 2 Yes (indicating pass) and 2 No (indicating no pass). The entropy, $$H(S)$$, then would be $$-0.5 log_2 0.5-0.5 log_2 0.5=1$$ bit. On the other hand, if we watch video, we will be have 3 possible outcomes, which are all yes. $$H(S)$$ would be $$1 log_2 1 - 0 log_2 0=0$$ bit.
 
 Information gain
-Information gain measures how useful a feature is for splitting the label (yes/no). We want to **maximize information gain**, and the feature with the highest information gain will split first.
-is the expected reduction in entropy due to sorting on a particular attribute (say an attribute that has small entropy)
-For example, the information gain of studying textbook is: $$Gain(S, "study textbook")= H(S) - ( p(study)H(S_study)+p(not study)H(S_notStudy) )$$
+
+let A = playing video games, and B = not playing video games
+The information gain of playing games is: $$Gain(S, game)= H(S) - ( p(A)H(S_A)+p(B)H(S_B) )$$. Here H(S) = 1 because there are 6 possible outcomes, 3 yes and 3 no. The probability of playing games is 3/6, and the probability of not playing games is 3/6. The entropy of playing games is $$-0.33 log_2 0.33-0.67 log_2 0.67=0.91$$, and entropy for not playing games is $$-0.67 log_2 0.67-0.33 log_2 0.33=0.91$$. Therefore, $$Gain(S, "game")= 1 - ( 0.5*0.91+0.5*0.91 )=0.09$$.
+
+ $$Gain(S, "video")= 1 - ( 1*0+0*0 )=1$$.
+ $$Gain(S, "Ask peers")= 1 - ( 2/6*1+4/6*1 )=0$$.
+
+Therefore, the predictor for predicting whether we are going to pass or not is watching tutorial videos (yes/no).
