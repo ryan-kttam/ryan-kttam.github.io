@@ -83,24 +83,24 @@ Naïve Bayes is a simple yet powerful machine learning algorithm that does a gre
 
 Consider the table above, if we have a new statement "Help my dad is missing", how does Naïve Bayes decide whether it is emergency or non-emergency statement?
 
-**Word frequencies**. Based on how many times a word occurs in a sentence, given its label, we can get a sense of how it belongs to one label or not using Bayes Theorem: $$P(A\|B)= \frac{P(B\left\vert A)P(A)}{P(B)}$$.
+**Word frequencies**. Based on how many times a word occurs in a sentence, given its label, we can get a sense of how it belongs to one label or not using Bayes Theorem: $$P(A\|B)= \frac{P(B\|A)P(A)}{P(B)}$$.
 
-Let’s say A is an Emergency statement, and B is the text sentence we are interested in testing. **By assuming each word is independent of one another**, P(help my son is missing) = $$P(help) * P(my) * P(son) * P(is) * P(missing)$$, where P indicates probability.
+Let’s say A is an Emergency statement, and B is the text sentence we are interested in testing. **By assuming each word is independent of one another**, P(help my son is missing) = $$P(help) * P(my) * P(son) * P(is) * P(missing)$$, where $$P$$ indicates probability.
 
-We now have every info to calculate the probability for this problem; starting with $$P(A)$$, the probability of an emergency statement, appeared three out of five times, therefore $$P(A)=3/5$$.
+We now have every info to calculate the probability for this problem; starting with $$P(A)$$, the probability of an emergency statement, appeared three out of five times, therefore $$P(A)=\frac{3}{5}$$.
 
-$$P(help)$$ is the frequency of help out of all word frequency: $$1/(4+5+3+6+6) = 1/24$$, $$P(my) = 2/24$$, $$P(dad) = 2/24$$, $$P(is) = 1/24$$, $$P(missing) = 1/24$$.
+$$P(help)$$ is the frequency of help out of all word frequency: $$\frac{1}{4+5+3+6+6} = \frac{1}{24}$$, $$P(my) = \frac{2}{24}$$, $$P(dad) = \frac{2}{24}$$, $$P(is) = \frac{1}{24}$$, $$P(missing) = \frac{1}{24}$$.
 
-P(help|Emergency) means the probability of the frequency of "help" appeared in Emergency label: $$1/13$$, $$P(my|Emergency) = 1/13$$, $$P(dad|Emergency) = 1/13$$, $$P(is|Emergency) = 0/13$$, $$P(missing) = 1/13$$.
-
-Then the equation becomes:
-
-P(Emergency|“help my dad is missing”) = $$P(help|Emergency)P(my|Emergency)P(dad|Emergency)P(is|Emergency)P(missing|Emergency)P(Emergency)/ (P(help)P(my)P(dad)P(is)P(missing)$$
-
-Note that P(is|Emergency) = 0, which will mess up the calculation as everything multiple by 0 is 0. To solve this issue, we need to apply **Laplace smoothing**, which add **all unique words by 1**. That is, to add 19 to the denominator, and add 1 to the numerator. E.g. $$P(help|Emergency) = 2/32$$.
+P(help\|Emergency) means the probability of the frequency of "help" appeared in Emergency label: $$\frac{1}{13}$$, $$P(my\|Emergency) = \frac{1}{13}$$, $$P(dad\|Emergency) = \frac{1}{13}$$, $$P(is\|Emergency) = \frac{0}{13}$$, $$P(missing) = \frac{1}{13}$$.
 
 Then the equation becomes:
-$$P(Emergency|"help my dad is missing") = (2/32*2/32*2/32*1/32*2/32)(3/5)/ (2/43*3/43*3/43*2/43*3/43) = 0.389$$
+
+P(Emergency\|"help my dad is missing") = $$\frac{P(help\|Emergency)P(my\|Emergency)P(dad\|Emergency)P(is\|Emergency)P(missing\|Emergency)P(Emergency)} {P(help)P(my)P(dad)P(is)P(missing)}$$
+
+Note that P(is\|Emergency) = 0, which will mess up the calculation as everything multiple by 0 is 0. To solve this issue, we need to apply **Laplace smoothing**, which add **all unique words by 1**. That is, to add 19 to the denominator, and add 1 to the numerator. E.g. $$P(help\|Emergency) = \frac{2}{32}$$.
+
+Then the equation becomes:
+P(Emergency\|"help my dad is missing") = $$\frac{(\frac{2}{32}\*\frac{2}{32}\*\frac{2}{32}\*\frac{1}{32}\*\frac{2}{32})(\frac{3}{5})} {2/43*3/43*3/43*2/43*3/43} = 0.389$$
 
 $$P(Non-Emergency|"help my dad is missing") = (1/32*3/32*2/32*2/32*1/32)(2/5)/ (2/43*3/43*3/43*2/43*3/43) = 0.173$$
 
