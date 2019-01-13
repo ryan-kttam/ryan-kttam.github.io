@@ -91,7 +91,7 @@ We now have every info to calculate the probability for this problem; starting w
 
 $$P(help)$$ is the frequency of help out of all word frequency: $$\frac{1}{4+5+3+6+6} = \frac{1}{24}$$, $$P(my) = \frac{2}{24}$$, $$P(dad) = \frac{2}{24}$$, $$P(is) = \frac{1}{24}$$, $$P(missing) = \frac{1}{24}$$.
 
-P(help\|Emergency) means the probability of the frequency of "help" appeared in Emergency label: $$\frac{1}{13}$$, $$P(my\|Emergency) = \frac{1}{13}$$, $$P(dad\|Emergency) = \frac{1}{13}$$, $$P(is\|Emergency) = \frac{0}{13}$$, $$P(missing) = \frac{1}{13}$$.
+P(help\|Emergency) means the probability of the frequency of "help" appeared in Emergency label: $$P(help\|Emergency)=\frac{1}{13}$$, $$P(my\|Emergency) = \frac{1}{13}$$, $$P(dad\|Emergency) = \frac{1}{13}$$, $$P(is\|Emergency) = \frac{0}{13}$$, $$P(missing) = \frac{1}{13}$$.
 
 Then the equation becomes:
 
@@ -100,9 +100,9 @@ P(Emergency\|"help my dad is missing") = $$\frac{P(help\|Emergency)P(my\|Emergen
 Note that P(is\|Emergency) = 0, which will mess up the calculation as everything multiple by 0 is 0. To solve this issue, we need to apply **Laplace smoothing**, which add **all unique words by 1**. That is, to add 19 to the denominator, and add 1 to the numerator. E.g. $$P(help\|Emergency) = \frac{2}{32}$$.
 
 Then the equation becomes:
-P(Emergency\|"help my dad is missing") = $$\frac{(\frac{2}{32}\*\frac{2}{32}\*\frac{2}{32}\*\frac{1}{32}\*\frac{2}{32})(\frac{3}{5})} {2/43*3/43*3/43*2/43*3/43} = 0.389$$
+P(Emergency\|"help my dad is missing") = $$\frac{(\frac{2}{32}* \frac{2}{32} * \frac{2}{32} * \frac{1}{32} * \frac{2}{32})(\frac{3}{5})} {\frac{2}{43} * \frac{3}{43} * \frac{3}{43} * \frac{2}{43} * \frac{3}{43} } = 0.389$$
 
-$$P(Non-Emergency|"help my dad is missing") = (1/32*3/32*2/32*2/32*1/32)(2/5)/ (2/43*3/43*3/43*2/43*3/43) = 0.173$$
+P(Non-Emergency\|"help my dad is missing") = $$(\frac{1}{32} * \frac{3}{32} * \frac{2}{32} * \frac{2}{32} * \frac{1}{32})(\frac{2}{5}){(\frac{2}{43} * \frac{3}{43} * \frac{3}{43} * \frac{2}{43} * \frac{3}{43})} = 0.173$$
 
 As a result, the probability of being an emergency statement is 0.389, and being an non-emergency statement is 0.173.
-In addition, the likelihood of the event, or likelihood of being an emergency statement , is 0.389/(0.389+0.173) = .692. Since 0.692 is higher than 0.5, the model will label this sentence as emergency statement.
+In addition, the likelihood of the event, or likelihood of being an emergency statement , is $$\frac{0.389}{(0.389+0.173)} = .692$$. Since 0.692 is higher than 0.5, the model will label this sentence as emergency statement.
