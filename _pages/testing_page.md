@@ -57,10 +57,52 @@ Consider the table above, if we do NOT ask peers, there will be 4 possible outco
 
 Information gain
 
-let A = playing video games, and B = not playing video games
+let A = playing video games, and B = not playing video games.
 The information gain of playing games is: $$Gain(S, game)= H(S) - ( p(A)H(S_A)+p(B)H(S_B) )$$. Here H(S) = 1 because there are 6 possible outcomes, 3 yes and 3 no. The probability of playing games is 3/6, and the probability of not playing games is 3/6. The entropy of playing games is $$-0.33 log_2 0.33-0.67 log_2 0.67=0.91$$, and entropy for not playing games is $$-0.67 log_2 0.67-0.33 log_2 0.33=0.91$$. Therefore, $$Gain(S, "game")= 1 - ( 0.5*0.91+0.5*0.91 )=0.09$$.
 
  $$Gain(S, "video")= 1 - ( 1*0+0*0 )=1$$.
  $$Gain(S, "Ask peers")= 1 - ( 2/6*1+4/6*1 )=0$$.
 
-Therefore, the predictor for predicting whether we are going to pass or not is watching tutorial videos (yes/no).
+Since we are trying to maximum the information gain, the predictor we split first for predicting whether we are going to pass or not is watching tutorial videos (yes/no).
+
+# Naïve Bayes
+
+Naïve Bayes is a simple yet powerful machine learning algorithm that does a great job in supervised learning. It uses a probability theory, Bayes’ theorem, to make classifications.
+
+## Characteristics of Naïve Bayes
+ - generally useful in NLP (text) problems
+ - Easy and fast to make predictions
+ - performs well in multi-class predictions
+ - Assuming each feature is independence of one another
+ - Performs well when inputs are categorical variables
+ - If a variable in the test set has a new value that is never observed in the training phrase, it will return 0 probability (although can be solved with some techniques)
+
+## How does Naïve Bayes work?
+
+<img src="/images/ml/image3.jpg" alt="table2">
+
+Consider the table above, if we have a new statement "Help my dad is missing", how does Naïve Bayes decide whether it is emergency or non-emergency statement?
+
+**word frequencies**. Based on how many times a word occurs in a sentence, given its label, we can get a sense of how it belongs to one label or not using Bayes Theorem: $$P(A|B)= P(B|A)P(A)/P(B)$$.
+
+Let’s say A is an Emergency statement, and B is the text sentence we are interested in testing. **By assuming each word is independent of one another**, $$P(help my son is missing) = P(help) * P(my) * P(son) * P(is) * P(missing)$$, where P indicates probability.
+
+We now have every info to calculate the probability for this problem; starting with $$P(A)$$, the probability of an emergency statement, appeared three out of five times, therefore $$P(A)=3/5$$.
+
+$$P(help)$$ is the frequency of help out of all word frequency: $$1/(4+5+3+6+6) = 1/24$$, $$P(my) = 2/24$$, $$P(dad) = 2/24$$, $$P(is) = 1/24$$, $$P(missing) = 1/24$$.
+
+P(help|Emergency) means the probability of the frequency of "help" appeared in Emergency label: $$1/13$$, $$P(my|Emergency) = 1/13$$, $$P(dad|Emergency) = 1/13$$, $$P(is|Emergency) = 0/13$$, $$P(missing) = 1/13$$.
+
+Then the equation becomes:
+
+P(Emergency|“help my dad is missing”) = $$P(help|Emergency)P(my|Emergency)P(dad|Emergency)P(is|Emergency)P(missing|Emergency)P(Emergency)/ (P(help)P(my)P(dad)P(is)P(missing)$$
+
+Note that P(is|Emergency) = 0, which will mess up the calculation as everything multiple by 0 is 0. To solve this issue, we need to apply **Laplace smoothing**, which add **all unique words by 1**. That is, to add 19 to the denominator, and add 1 to the numerator. E.g. $$P(help|Emergency) = 2/32$$.
+
+Then the equation becomes:
+$$P(Emergency|"help my dad is missing") = (2/32*2/32*2/32*1/32*2/32)(3/5)/ (2/43*3/43*3/43*2/43*3/43) = 0.389$$
+
+$$P(Non-Emergency|"help my dad is missing") = (1/32*3/32*2/32*2/32*1/32)(2/5)/ (2/43*3/43*3/43*2/43*3/43) = 0.173$$
+
+As a result, the probability of being an emergency statement is 0.389, and being an non-emergency statement is 0.173.
+In addition, the likelihood of the event, or likelihood of being an emergency statement , is 0.389/(0.389+0.173) = .692. Since 0.692 is higher than 0.5, the model will label this sentence as emergency statement.
