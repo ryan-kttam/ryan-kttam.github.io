@@ -53,15 +53,20 @@ Entropy: $$H(S) = -p_1 log_2 p_1 – p_0 log_2 p_0$$, where $$S$$ is the subset 
 
 <img src="/images/ml/image1.jpg" alt="table1">
 
+
+### Entropy
+
 Consider the table above, if we do NOT ask peers, there will be 4 possible outcomes: 2 Yes (indicating pass) and 2 No (indicating no pass). The entropy, $$H(S)$$, then would be $$-0.5 log_2 0.5-0.5 log_2 0.5=1$$ bit. On the other hand, if we watch video, we will be have 3 possible outcomes, which are all yes. $$H(S)$$ would be $$1 log_2 1 - 0 log_2 0=0$$ bit.
 
-Information gain
+###Information gain
 
-let A = playing video games, and B = not playing video games.
-The information gain of playing games is: $$Gain(S, game)= H(S) - ( p(A)H(S_A)+p(B)H(S_B) )$$. Here H(S) = 1 because there are 6 possible outcomes, 3 yes and 3 no. The probability of playing games is 3/6, and the probability of not playing games is 3/6. The entropy of playing games is $$-0.33 log_2 0.33-0.67 log_2 0.67=0.91$$, and entropy for not playing games is $$-0.67 log_2 0.67-0.33 log_2 0.33=0.91$$. Therefore, $$Gain(S, "game")= 1 - ( 0.5*0.91+0.5*0.91 )=0.09$$.
+let A = playing video games, and B = not playing video games.The information gain of playing games is: $$Gain(S, game)= H(S) - ( p(A)H(S_A)+p(B)H(S_B) )$$. Here $$H(S) = 1$$ because there are 6 possible outcomes, 3 yes and 3 no. The probability of playing games is 3/6, and the probability of not playing games is 3/6.
 
- $$Gain(S, "video")= 1 - ( 1*0+0*0 )=1$$.
- $$Gain(S, "Ask peers")= 1 - ( 2/6*1+4/6*1 )=0$$.
+The entropy of playing games is $$-0.33 log_2 0.33-0.67 log_2 0.67=0.91$$, and entropy for not playing games is $$-0.67 log_2 0.67-0.33 log_2 0.33=0.91$$.
+
+Therefore, $$Gain(S, "game")= 1 - ( 0.5*0.91+0.5*0.91 )=0.09$$
+ $$Gain(S, "video")= 1 - ( 1*0+0*0 )=1$$
+ $$Gain(S, "Ask peers")= 1 - ( \frac{2}{6} * 1 + \frac{4}{6} * 1 )=0$$
 
 Since we are trying to maximum the information gain, the predictor we split first for predicting whether we are going to pass or not is watching tutorial videos (yes/no).
 
@@ -102,7 +107,7 @@ Note that P(is\|Emergency) = 0, which will mess up the calculation as everything
 Then the equation becomes:
 P(Emergency\|"help my dad is missing") = $$\frac{(\frac{2}{32}* \frac{2}{32} * \frac{2}{32} * \frac{1}{32} * \frac{2}{32})(\frac{3}{5})} {\frac{2}{43} * \frac{3}{43} * \frac{3}{43} * \frac{2}{43} * \frac{3}{43} } = 0.389$$
 
-P(Non-Emergency\|"help my dad is missing") = $$(\frac{1}{32} * \frac{3}{32} * \frac{2}{32} * \frac{2}{32} * \frac{1}{32})(\frac{2}{5}){(\frac{2}{43} * \frac{3}{43} * \frac{3}{43} * \frac{2}{43} * \frac{3}{43})} = 0.173$$
+P(Non-Emergency\|"help my dad is missing") = $$\frac{(\frac{1}{32} * \frac{3}{32} * \frac{2}{32} * \frac{2}{32} * \frac{1}{32})(\frac{2}{5})}{(\frac{2}{43} * \frac{3}{43} * \frac{3}{43} * \frac{2}{43} * \frac{3}{43})} = 0.173$$
 
 As a result, the probability of being an emergency statement is 0.389, and being an non-emergency statement is 0.173.
 In addition, the likelihood of the event, or likelihood of being an emergency statement , is $$\frac{0.389}{(0.389+0.173)} = .692$$. Since 0.692 is higher than 0.5, the model will label this sentence as emergency statement.
