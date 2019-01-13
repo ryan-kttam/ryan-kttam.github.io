@@ -60,7 +60,9 @@ Consider the table above, if we do NOT ask peers, there will be 4 possible outco
 
 ###Information gain
 
-let A = playing video games, and B = not playing video games.The information gain of playing games is: $$Gain(S, game)= H(S) - ( p(A)H(S_A)+p(B)H(S_B) )$$. Here $$H(S) = 1$$ because there are 6 possible outcomes, 3 yes and 3 no. The probability of playing games is 3/6, and the probability of not playing games is 3/6.
+The equation of information gain is $$Gain(S,A)=H(S)-\sum_{v\in values(A)}[\frac{\|S_v\|}{\|S\|}H(S_v)]
+
+let A = playing video games, and B = not playing video games. The information gain of playing games is: $$Gain(S, game)= H(S) - ( p(A)H(S_A)+p(B)H(S_B) )$$. Here $$H(S) = 1$$ because there are 6 possible outcomes, 3 yes and 3 no. The probability of playing games is 3/6, and the probability of not playing games is 3/6.
 
 The entropy of playing games is $$-0.33 log_2 0.33-0.67 log_2 0.67=0.91$$, and entropy for not playing games is $$-0.67 log_2 0.67-0.33 log_2 0.33=0.91$$.
 
