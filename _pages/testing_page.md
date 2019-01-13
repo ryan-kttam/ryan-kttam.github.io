@@ -83,7 +83,7 @@ Naïve Bayes is a simple yet powerful machine learning algorithm that does a gre
 
 Consider the table above, if we have a new statement "Help my dad is missing", how does Naïve Bayes decide whether it is emergency or non-emergency statement?
 
-**Word frequencies**. Based on how many times a word occurs in a sentence, given its label, we can get a sense of how it belongs to one label or not using Bayes Theorem: P(A|B)= P(B|A)P(A)/P(B).
+**Word frequencies**. Based on how many times a word occurs in a sentence, given its label, we can get a sense of how it belongs to one label or not using Bayes Theorem: $$P(A\|B)= \frac{P(B\|A)P(A)}{P(B)}$$.
 
 Let’s say A is an Emergency statement, and B is the text sentence we are interested in testing. **By assuming each word is independent of one another**, P(help my son is missing) = $$P(help) * P(my) * P(son) * P(is) * P(missing)$$, where P indicates probability.
 
