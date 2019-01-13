@@ -20,7 +20,7 @@ Logistic regression measures the relationship between the categorical dependent 
 ## How does logistic regression work?
 Let's consider a scenario in which we are predicting whether a person has diabetes based on their age and weight.
 
-We first plug the predictors into a linear function: $$L=b_0+b_1 age+b_2 weight$$. We called L as log-odds, which is a linear combination of age and weight, with $$b_0$$ as a constant, and $$b_1, b_2$$ as coefficients. We then transform the log-odds to probabilities using the logistic regression formula: $$p=e^L/(1+e^L)$$.
+We first plug the predictors into a linear function: $$L=b_0+b_1 age+b_2 weight$$. We called L as log-odds, which is a linear combination of age and weight, with $$b_0$$ as a constant, and $$b_1, b_2$$ as coefficients. We then transform the log-odds to probabilities using the logistic regression formula: $$p=\frac{e^L}{1+e^L}$$.
 
 <img src="/images/ml/image2.jpg" alt="lr1">
 
@@ -83,9 +83,9 @@ Naïve Bayes is a simple yet powerful machine learning algorithm that does a gre
 
 Consider the table above, if we have a new statement "Help my dad is missing", how does Naïve Bayes decide whether it is emergency or non-emergency statement?
 
-**word frequencies**. Based on how many times a word occurs in a sentence, given its label, we can get a sense of how it belongs to one label or not using Bayes Theorem: $$P(A|B)= P(B|A)P(A)/P(B)$$.
+**Word frequencies**. Based on how many times a word occurs in a sentence, given its label, we can get a sense of how it belongs to one label or not using Bayes Theorem: P(A|B)= P(B|A)P(A)/P(B).
 
-Let’s say A is an Emergency statement, and B is the text sentence we are interested in testing. **By assuming each word is independent of one another**, $$P(help my son is missing) = P(help) * P(my) * P(son) * P(is) * P(missing)$$, where P indicates probability.
+Let’s say A is an Emergency statement, and B is the text sentence we are interested in testing. **By assuming each word is independent of one another**, P(help my son is missing) = $$P(help) * P(my) * P(son) * P(is) * P(missing)$$, where P indicates probability.
 
 We now have every info to calculate the probability for this problem; starting with $$P(A)$$, the probability of an emergency statement, appeared three out of five times, therefore $$P(A)=3/5$$.
 
