@@ -49,7 +49,7 @@ Before we explore how decision trees works, we need to understand the following 
 ## How does decision trees work?
 
 There are many ways to measure the purity of the split. One way is utilizing entropy and information gain.
-Entropy: $$H(S) = -p_1 log_2 p_1 – p_0 log_2 p_0$$, where $$S$$ is the subset of training examples, $$p_1$$ is the % of positive examples in $$S$$, $$p_0$$ is the % of negative examples in $$S$$.
+Entropy: $$H(S) = -p_1 log_2 p_1 – p_0 log_2 p_0$$, where $$S$$ is the subset of training examples, $$p_1$$ is the percentage of positive examples in $$S$$, $$p_0$$ is the percentage of negative examples in $$S$$.
 
 <img src="/images/ml/image1.jpg" alt="table1">
 
@@ -58,9 +58,9 @@ Entropy: $$H(S) = -p_1 log_2 p_1 – p_0 log_2 p_0$$, where $$S$$ is the subset 
 
 Consider the table above, if we do NOT ask peers, there will be 4 possible outcomes: 2 Yes (indicating pass) and 2 No (indicating no pass). The entropy, $$H(S)$$, then would be $$-0.5 log_2 0.5-0.5 log_2 0.5=1$$ bit. On the other hand, if we watch video, we will be have 3 possible outcomes, which are all yes. $$H(S)$$ would be $$1 log_2 1 - 0 log_2 0=0$$ bit.
 
-###Information gain
+### Information gain
 
-The equation of information gain is $$Gain(S,A)=H(S)-\sum_{v\in values(A)}[\frac{\|S_v\|}{\|S\|}H(S_v)]
+The equation of information gain is $$Gain(S,A)=H(S)-\sum_{v\in values(A)}[\frac{\|S_v\|}{\|S\|}H(S_v)]$$
 
 let A = playing video games, and B = not playing video games. The information gain of playing games is: $$Gain(S, game)= H(S) - ( p(A)H(S_A)+p(B)H(S_B) )$$. Here $$H(S) = 1$$ because there are 6 possible outcomes, 3 yes and 3 no. The probability of playing games is 3/6, and the probability of not playing games is 3/6.
 
