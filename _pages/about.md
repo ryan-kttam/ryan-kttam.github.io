@@ -9,6 +9,12 @@ header:
 
 I am a data analyst at *[Lawrence Livermore National Laboratory](https://en.wikipedia.org/wiki/Lawrence_Livermore_National_Laboratory)* that concentrates on data visualization and machine learning algorithms. My skill set involves Python, SQL, R, machine learning, and data mining. I am currently looking to gain more experience in the field of data science.
 
+## Education
+  * Georgia Institute of Technology - **Computer Science, M.S.**     *Starting Fall 2019*
+  * UC Davis - Statistics, B.S.     *Graduated 2016*
+  * UC Davis - Psychology, B.A.     *Graduated 2016*
+  * Udacity - Machine Learning Engineer Nanodegree     *Graduated 2018*
+
 ## Skills
 
 ### Machine Learning
@@ -43,11 +49,6 @@ I am a data analyst at *[Lawrence Livermore National Laboratory](https://en.wiki
     + Python Packages: Keras, Pandas, Matplotlib, Seaborn, NLTK, Scikit-Learn, Numpy, and more
   * Experienced: Hadoop, Java, C
   * Fluent: English, Cantonese, Mandarin
-
-## Education
-  * UC Davis - Statistics, B.S.     *Graduated 2016*
-  * UC Davis - Psychology, B.A.     *Graduated 2016*
-  * Udacity - Machine Learning Engineer Nanodegree     *Graduated 2018*
 
 ## Awards
   * Three LLNL Spot Awards - Recognition of outstanding contributions in multiple projects

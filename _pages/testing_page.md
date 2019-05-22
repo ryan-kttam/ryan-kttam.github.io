@@ -46,7 +46,7 @@ Before we explore how decision trees works, we need to understand the following 
  - Prone to overfitting
  - cannot train unseen categorical values
 
-## How does decision trees work?
+## How does Decision Trees work?
 
 There are many ways to measure the purity of the split. One way is utilizing entropy and information gain.
 Entropy: $$H(S) = -p_1 log_2 p_1 – p_0 log_2 p_0$$, where $$S$$ is the subset of training examples, $$p_1$$ is the percentage of positive examples in $$S$$, $$p_0$$ is the percentage of negative examples in $$S$$.
@@ -60,9 +60,9 @@ Consider the table above, if we do NOT ask peers, there will be 4 possible outco
 
 ### Information gain
 
-The equation of information gain is $$Gain(S,A)=H(S)-\sum_{v\in values(A)}[\frac{\|S_v\|}{\|S\|}H(S_v)]$$
+The equation of information gain is $$Gain(S,A)=H(S)-\sum_{v\in values(A)}[\frac{\|S_v\|}{\|S\|}H(S_v)]$$, where A is an predictor, v is the value of the predictor.
 
-let A = playing video games, and B = not playing video games. The information gain of playing games is: $$Gain(S, game)= H(S) - ( p(A)H(S_A)+p(B)H(S_B) )$$. Here $$H(S) = 1$$ because there are 6 possible outcomes, 3 yes and 3 no. The probability of playing games is 3/6, and the probability of not playing games is 3/6.
+let A = playing video games, and B = not playing video games. The information gain of playing games is: $$Gain(S, game)= H(S) - ( p(A)H(S_A)+p(B)H(S_B) )$$. Here $$H(S) = 1$$ because there are 6 possible outcomes, 3 yes and 3 no. The probability of playing games is 3/6, and the probability of not playing games is $$\frac{3}{6}$$.
 
 The entropy of playing games is $$-0.33 log_2 0.33-0.67 log_2 0.67=0.91$$, and entropy for not playing games is $$-0.67 log_2 0.67-0.33 log_2 0.33=0.91$$.
 
@@ -113,3 +113,26 @@ P(Non-Emergency\|"help my dad is missing") = $$\frac{(\frac{1}{32} * \frac{3}{32
 
 As a result, the probability of being an emergency statement is 0.389, and being an non-emergency statement is 0.173.
 In addition, the likelihood of the event, or likelihood of being an emergency statement , is $$\frac{0.389}{(0.389+0.173)} = .692$$. Since 0.692 is higher than 0.5, the model will label this sentence as emergency statement.
+
+# Support Vector Machine
+
+### What is support vector machine?
+
+support vector machine is an algorithm that can be used for regression and classification. It applies kernel trick to transform data in order to find the best way to separate classes.
+
+## Characteristics of Support Vector Machine
+ - Can handle non-linear features
+ - Great at dealing with high dimensional data
+ - Hard to interpret when the transformations become complex
+ - Slow training time for large dataset
+ - bad performance when many noises exist/ overlapping classes.
+
+## How does Support Vector Machine work?
+(give an graphic example)
+The goal of SVM is to choose a line, or hyperplane, that has the widest margin that separates two or more classes. In other words, we want a hyperplane that leaves as much space as possible between two classes.
+Kernel trick: Kernel trick is one of the most important elements in SVM. it transform and combine predictors in order to create a new dimension that can linearly separate two or more classes.
+
+SVM model parameters:
+C: prevent overfitting; allows you to decide how much you want to penalize misclassified points; higher C means heavier penalties on misclassification.
+Kernel: linear, rbf, polynomial, sigmoid
+Rbf requires a new parameter called gamma,  large gamma means more complexity (easy to overfit).
