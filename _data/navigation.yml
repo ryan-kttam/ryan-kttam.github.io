@@ -4,8 +4,8 @@ main:
     url: /about/
   - title: "Machine Learning"
     url: /machine-learning/
-  - title: "Statistics Terminology"
-    url: /statistics_term/
+#  - title: "Statistics Terminology"
+#    url: /statistics_term/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
