@@ -8,8 +8,11 @@ header:
 ---
 
 # Hypothesis Testing
-Hypothesis testing is a method that compares two or more data sets, or groups. There are two terminologies that one should be familiarized when referring to hypothesis testing: **null hypothesis** and **alternative hypothesis**. Null hypothesis represents the value of one variable in group A is the same as the value of the same variable in group B. Alternative hypothesis means the value of one variable in group A is not equal to the value of the same variable in group B. Instead of "not equal", it can also be greater than or less than, depending on how to set it up.
+Hypothesis testing is a method that compares two or more data sets, or groups. There are two terminologies that one should be familiarized when referring to hypothesis testing: **null hypothesis** and **alternative hypothesis**.
+- Null hypothesis represents the value of one variable in group A is the same as the value of the same variable in group B.
+- Alternative hypothesis means the value of one variable in group A is not equal to the value of the same variable in group B. Instead of "not equal", it can also be greater than or less than, depending on how to set it up.
 
+## Hypothesis Testing Example: Where's Wally?
 <img src="/images/wally.jpg" alt="wheres_wally">
 
 For example, we are interested in knowing whether coffee influences people's focus when completing a task, especially the ones who have started this habit. Let's assume we gathered 60 participants that typically drink coffee every day, 30 of them are not allowed to drink coffee for the day (say group A), and the other 30 are given a coffee prior the task (say group B). For the task, they are given a picture: a typical "where's wally" picture, and are asked to find where wally is in the picture. The time is measured in seconds.
