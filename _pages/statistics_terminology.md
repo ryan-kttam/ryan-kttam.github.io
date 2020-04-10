@@ -14,7 +14,7 @@ For example, we are interested in knowing whether coffee influences people's foc
 
 In this case, the null hypothesis would be the time of locating wally for group A is the same as group B. In other words, null hypothesis represents coffee does not influence people's focus when completing a task.
 
-$$ H<sub>0</sub>: &mu;<sub>A</sub>=&mu;<sub>B</sub> $$
+$H<sub>0</sub>: &mu;<sub>A</sub>=&mu;<sub>B</sub>$
 
 The alternative hypothesis in this case could be there is a difference between the time of locating wally for group A and group B.
 
