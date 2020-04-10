@@ -12,14 +12,16 @@ Hypothesis testing is a method that compares two or more data sets, or groups. T
 - Null hypothesis represents the value of one variable in group A is the same as the value of the same variable in group B.
 - Alternative hypothesis means the value of one variable in group A is not equal to the value of the same variable in group B. Instead of "not equal", it can also be greater than or less than, depending on how to set it up.
 
-## Hypothesis Testing Example: Where's Wally?
+## Hypothesis Testing Example: Coffee influences attention?
 <img src="/images/coffee.jpg" alt="coffee">
 
-For example, we are interested in knowing whether coffee influences people's focus when completing a task, especially the ones who have started this habit. Let's assume we gathered 60 participants that typically drink coffee every day, 30 of them are not allowed to drink coffee for the day (say group A), and the other 30 are given a coffee prior the task (say group B). For the task, they are given a picture: a typical "where's wally" picture, and are asked to find where wally is in the picture. The time is measured in seconds.
+For example, we are interested in knowing whether coffee influences people's focus when completing a task, especially the ones who have started this habit for years. Let's assume we gathered 60 participants that drink coffee daily, 30 of them are not allowed to drink coffee for the day of the experiment (say group A), and the other 30 are given a coffee prior the experiment (say group B). For the experiment, they are given a picture: a typical "where's Wally" picture, and are asked to find where Wally is in the picture. The time is measured in seconds.
 
-In this case, the null hypothesis would be the time of locating wally for group A is the same as group B. In other words, null hypothesis represents coffee does not influence people's focus when completing a task. It is represented as: H<sub>0</sub>: &mu;<sub>A</sub> = &mu;<sub>B</sub>
+In this case, the null hypothesis would be the average time of group A for finding Wally is the same as the average time of group B. In other words, null hypothesis represents coffee does not influence people's focus when completing a task. It is represented as: H<sub>0</sub>: &mu;<sub>A</sub> = &mu;<sub>B</sub>, where &mu is the average time for completing the task.
 
 The alternative hypothesis in this case could be there is a difference between the time of locating wally for group A and group B, usually represented as H<sub>a</sub>: &mu;<sub>A</sub> ≠ &mu;<sub>B</sub>.
+
+We would then run a statistical test and calculate whether there is a strong evidence, or significance, of disproving the null hypothesis. In this case, running two-sample t-test makes more sense because there are only two groups (group A and group B) and interested in whether two groups truly have difference in completion time.
 
 # Linear Regression
 Linear regression attempts to model the relationship between predictors variables to a response variable. For example, there can be a linear relationship between income and expense. The wealthier you are, the more money you are going to spend.
