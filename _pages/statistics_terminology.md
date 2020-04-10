@@ -12,11 +12,9 @@ Hypothesis testing is a method that compares two or more data sets, or groups. T
 
 For example, we are interested in knowing whether coffee influences people's focus when completing a task, especially the ones who have started this habit. Let's assume we gathered 60 participants that typically drink coffee every day, 30 of them are not allowed to drink coffee for the day (say group A), and the other 30 are given a coffee prior the task (say group B). For the task, they are given a picture: a typical "where's wally" picture, and are asked to find where wally is in the picture. The time is measured in seconds.
 
-In this case, the null hypothesis would be the time of locating wally for group A is the same as group B. In other words, null hypothesis represents coffee does not influence people's focus when completing a task.
+In this case, the null hypothesis would be the time of locating wally for group A is the same as group B. In other words, null hypothesis represents coffee does not influence people's focus when completing a task. It is represented as: H<sub>0</sub>: &mu;<sub>A</sub>=&mu;<sub>B</sub>
 
-H<sub>0</sub>: &mu;<sub>A</sub>=&mu;<sub>B</sub>
-
-The alternative hypothesis in this case could be there is a difference between the time of locating wally for group A and group B.
+The alternative hypothesis in this case could be there is a difference between the time of locating wally for group A and group B, usually represented as H<sub>a</sub>: &mu;<sub>A</sub>!=&mu;<sub>B</sub>. 
 
 # Linear Regression
 Linear regression attempts to model the relationship between predictors variables to a response variable. For example, there can be a linear relationship between income and expense. The wealthier you are, the more money you are going to spend.
