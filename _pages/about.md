@@ -7,10 +7,10 @@ header:
   image: "/images/mm1.jpg"
 ---
 
-I am a data analyst at *[Lawrence Livermore National Laboratory](https://en.wikipedia.org/wiki/Lawrence_Livermore_National_Laboratory)* that concentrates on data visualization and machine learning algorithms. My skill set involves Python, SQL, R, machine learning, and data mining. I am currently looking to gain more experience in the field of data science.
+I am a data analyst at *[Lawrence Livermore National Laboratory](https://en.wikipedia.org/wiki/Lawrence_Livermore_National_Laboratory)* that concentrates on data visualization and machine learning algorithms. I am proficient in Python, SQL, R, machine learning, and data visualization.
 
 ## Education
-  * Georgia Institute of Technology - **Computer Science, M.S.**     *Expected Graduating Summer 2021*
+  * Georgia Institute of Technology - **Computer Science, M.S.**     *Graduating Summer 2021*
   * UC Davis - Statistics, B.S.     *Graduated 2016*
   * UC Davis - Psychology, B.A.     *Graduated 2016*
   * Udacity - Machine Learning Engineer Nanodegree     *Graduated 2018*
@@ -38,7 +38,7 @@ I am a data analyst at *[Lawrence Livermore National Laboratory](https://en.wiki
 ### Data Mining
  * **Data Visualization**
 
-    *Relevant Project: [Android Market Analysis](/Android_Market_Analysis/)*
+    *Relevant Project: [Stock Trading Analysis](/Stock_Market/), [Android Market Analysis](/Android_Market_Analysis/)*
 
  * **Feature Learning/ Feature Engineering**
 
