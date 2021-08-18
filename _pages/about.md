@@ -52,5 +52,6 @@ I am a data analyst at *[Lawrence Livermore National Laboratory](https://en.wiki
   * Fluent: English, Cantonese, Mandarin
 
 ## Awards
-  * Three LLNL Spot Awards - Recognition of outstanding contributions in multiple projects
-  * One Organization Award - In recognition of Addressing customer feedback through prioritization and execution of several data analytic improvements including modification or creation of new dashboards/ analyses to address customer needs and expansion of functionalities to Managers and Administrators.
+  * Lawrence Livermore National Laboratory
+    * LLNL Spot Award x 3 - Recognition of outstanding contributions in multiple projects
+    * One Organization Award - *Aug 2021* In recognition of Addressing customer feedback through prioritization and execution of several data analytic improvements including modification or creation of new dashboards/ analyses to address customer needs and expansion of functionalities to Managers and Administrators.
