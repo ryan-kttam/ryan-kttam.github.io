@@ -7,13 +7,14 @@ header:
   image: "/images/mm1.jpg"
 ---
 
-I am a data analyst at *[Lawrence Livermore National Laboratory](https://en.wikipedia.org/wiki/Lawrence_Livermore_National_Laboratory)* that concentrates on data visualization and machine learning algorithms. I am proficient in Python, SQL, R, machine learning, and data visualization.
+I am a data Scientist at *[Feedzai](https://feedzai.com/)* that concentrates on data preprocessing and improving machine learning algorithms. I work with key stakeholders with both technical and non-technical background, delivering findings to assist in decision making on the data science part of the project. I am proficient in Python, SQL, R, data preprocessing, machine learning, and data visualization.
 
 ## Education
-  * Georgia Institute of Technology - **Computer Science, M.S. 4.0/4.0 GPA**     *Graduated 2021*
-    * specialized in Machine Learning
-  * UC Davis - Statistics, B.S. 3.5/4.0 GPA    *Graduated 2016*
-  * UC Davis - Psychology, B.A. 3.5/4.0 GPA    *Graduated 2016*
+  * Georgia Institute of Technology - **Computer Science, M.S. **     *Graduated 2021*
+    * Specialized in Machine Learning
+    * 4.0/4.0 GPA
+  * UC Davis - Statistics & psychology, B.S. *Graduated 2016*
+    * 3.5/4.0 GPA
   * Udacity - Machine Learning Engineer Nanodegree     *Graduated 2018*
 
 ## Skills
