@@ -7,7 +7,7 @@ header:
   image: "/images/mm1.jpg"
 ---
 
-I am a data Scientist at *[Feedzai](https://feedzai.com/)* that concentrates on data preprocessing and improving machine learning algorithms. I work with key stakeholders with both technical and non-technical background, delivering findings to assist in decision making on the data science part of the project. I am proficient in Python, SQL, R, data preprocessing, machine learning, and data visualization.
+I am a data scientist at *[Feedzai](https://feedzai.com/)* that concentrates on data preprocessing and improving machine learning algorithms. I work with key stakeholders with both technical and non-technical background, delivering findings to assist in decision making on the data science part of the project. I am proficient in Python, SQL, R, data preprocessing, machine learning, and data visualization.
 
 ## Experience
 
@@ -17,7 +17,7 @@ I am a data Scientist at *[Feedzai](https://feedzai.com/)* that concentrates on 
     * 2016 - 2021
 
 ## Education
-  * Georgia Institute of Technology - **Computer Science, M.S. **     *Graduated 2021*
+  * Georgia Institute of Technology - **Computer Science, M.S.**     *Graduated 2021*
     * Specialized in Machine Learning
     * 4.0/4.0 GPA
   * UC Davis - Statistics & psychology, B.S. *Graduated 2016*
